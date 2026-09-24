@@ -28,7 +28,7 @@ export default function LoginPage() {
     setIsSubmitting(true)
 
     try {
-      await login(email, password)
+      await login(email.trim(), password)
       navigate('/profile')
     } catch (err) {
       setError(

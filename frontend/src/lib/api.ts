@@ -11,6 +11,7 @@ async function request<T>(
     ...options,
     headers: {
       'Content-Type': 'application/json',
+      Accept: 'application/json',
       ...(token ? { Authorization: `Bearer ${token}` } : {}),
       ...options.headers,
     },
@@ -25,7 +26,11 @@ async function request<T>(
   return res.json()
 }
 
-async function requestData<T>(path: string, options: RequestInit = {}, token?: string): Promise<T> {
+async function requestData<T>(
+  path: string,
+  options: RequestInit = {},
+  token?: string
+): Promise<T> {
   const body = await request<{ data: T }>(path, options, token)
   return body.data
 }

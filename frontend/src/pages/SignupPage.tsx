@@ -35,7 +35,12 @@ export default function SignupPage() {
 
     setIsSubmitting(true)
     try {
-      await signup(email, password, passwordConfirmation, fullName || null)
+      await signup(
+        email.trim(),
+        password,
+        passwordConfirmation,
+        fullName.trim() || null
+      )
       navigate('/profile')
     } catch (err) {
       setError(
