@@ -1,6 +1,6 @@
 # Alcance del MVP de FlowSync
 
-**Estado:** alcance consensuado, base del PRD (el PRD aún no está escrito).
+**Estado:** alcance consensuado, base del PRD (ver [`flowsync-mvp.md`](flowsync-mvp.md)).
 **Validación:** caso de estudio, no cliente real. Lo que aquí se afirma está contrastado con una hipótesis, no con uso.
 
 Este documento se queda a nivel de producto. Modelo de datos, estados internos, endpoints y requisitos técnicos se deciden más adelante.
